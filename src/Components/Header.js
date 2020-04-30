@@ -1,5 +1,4 @@
-'use strict';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 class Header extends React.Component {
@@ -7,9 +6,10 @@ class Header extends React.Component {
     return (
       <nav className="navbar navbar-light">
 
-<Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
            {this.props.appName.toLowerCase()}
          </Link>
+         
           <ul className="nav navbar-nav pull-xs-right">
            <li className="nav-item">
              <Link to="/" className="nav-link">
@@ -18,8 +18,7 @@ class Header extends React.Component {
            </li>
 
            <li className="nav-item">
-             <Link to="login" className="nav-link">               Sign in
-             </Link>
+             <Link to="login" className="nav-link"> Sign in</Link>
           </li>
          </ul>
       </nav>

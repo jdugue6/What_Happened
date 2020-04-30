@@ -8,15 +8,12 @@ const defaultState= {
   appName: 'what_happened',
   articles: null
 };
+
 const reducer= function(state = defaultState, action) {
    return state;
-   
   };
+  
 const store = createStore(reducer);
-
-
-
-
 
 ReactDOM.render((
   <Provider store={store}>
