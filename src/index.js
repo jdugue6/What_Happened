@@ -4,7 +4,7 @@ import React from 'react';
 import { createStore } from 'redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Home from './Components/Home';
-// import Login from './components/Login';
+import Login from './Components/Login';
 
 
 const defaultState= { 
@@ -21,9 +21,9 @@ const store = createStore(reducer);
 ReactDOM.render((
   <Provider store={store}>
    <BrowserRouter>
-       <Route path="/" component={Home}>
-          {/* <Route path="login" component={Login} /> */}
-          </Route>
+       <Route path="/" component={Home}/>
+       <Route path="login" component={Login} />
+          
    </BrowserRouter> 
   </Provider>
 ), document.getElementById('root'));
