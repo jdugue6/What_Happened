@@ -1,10 +1,22 @@
-import { Provider } from 'react-redux';
-import ReactDOM from 'react-dom';
 import React from 'react';
-import { createStore } from 'redux';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+
+import App from './Components/App';
 import Home from './Components/Home';
-// import Login from './components/Login';
+import Login from './Components/Login/Login';
+
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import { createStore } from 'redux';
+import { createBrowserHistory } from "history";
+
+const customHistory = createBrowserHistory();
 
 
 const defaultState= { 
@@ -21,9 +33,12 @@ const store = createStore(reducer);
 ReactDOM.render((
   <Provider store={store}>
    <BrowserRouter>
-       <Route path="/" component={Home}>
-          {/* <Route path="login" component={Login} /> */}
-          </Route>
+     <div>
+        <App/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/login" component={Login}/>
+          {/* <Route path="/register" component={Register}/> */}
+     </div>
    </BrowserRouter> 
   </Provider>
 ), document.getElementById('root'));
