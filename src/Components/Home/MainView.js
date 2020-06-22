@@ -1,4 +1,4 @@
-import ArticleList from '../ArticleList';
+import ArticleList from '../Article/ArticleList';
 import React from 'react';
 import { connect } from 'react-redux';
 
