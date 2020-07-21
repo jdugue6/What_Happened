@@ -20,8 +20,8 @@ const customHistory = createBrowserHistory();
 
 
 const defaultState= { 
-  appName: 'what_happened',
-  articles: null
+  appName: 'Joey Dugue',
+  
 };
 
 const reducer= function(state = defaultState, action) {

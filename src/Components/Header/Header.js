@@ -9,7 +9,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-light">
 
         <Link to="/" className="navbar-brand">
-           {this.props.appName.toLowerCase()}
+           {this.props.appName}
          </Link>
          
           <ul className="nav navbar-nav pull-xs-right">
@@ -19,9 +19,9 @@ class Header extends React.Component {
             </Link>
            </li>
 
-           <li className="nav-item">
+           {/*<li className="nav-item">
              <Link to="/login" className="nav-link"> Login</Link>
-          </li>
+    </li>*/}
 
           {/* <li className="nav-item">
              <Link to="/register" className="nav-link"> Register</Link>
