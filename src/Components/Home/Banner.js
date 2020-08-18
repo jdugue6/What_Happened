@@ -1,13 +1,14 @@
 import React from 'react';
+import './Home.css'
 
 const Banner = ({ appName }) => {
   return (
-    <div className="banner">
+    <div className="banner joeybanner">
       <div className="container">
         <h1 className="logo-font">
-          {appName.toLowerCase()}
+          {appName}
         </h1>
-        <p>A place to share your knowledge.</p>
+        <p>fix later.</p>
       </div>
     </div>
   );

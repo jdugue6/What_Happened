@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Header from './Header/Header';
 import { connect } from 'react-redux';
 
+import './App.css'
+
 const mapStateToProps = state => ({
   appName: state.appName
 });

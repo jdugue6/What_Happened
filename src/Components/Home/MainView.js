@@ -1,4 +1,4 @@
-import ArticleList from '../Article/ArticleList';
+import JoeyDugue from '../Section/JoeyDugue';
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -12,18 +12,36 @@ const MainView = props => {
       <div className="feed-toggle">
         <ul className="nav nav-pills outline-active">
 
+
         <li className="nav-item">
           <a
             href=""
             className="nav-link active">
-            Global Feed
+            About Me
           </a>
         </li>
+      
+        <li className="nav-item">
+          <a
+            href=""
+            className="nav-link ">
+            Classroom Projects
+          </a>
+        </li>
+       
+        <li className="nav-item">
+          <a
+            href=""
+            className="nav-link ">
+            Personal Projects
+          </a>
+        </li>
+      
 
-        </ul>
+       </ul>
       </div>
 
-      <ArticleList
+      <JoeyDugue
         articles={props.articles} 
       />
     </div>

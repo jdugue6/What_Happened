@@ -2,13 +2,14 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import './Header.css'
 
 class Header extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-light">
 
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand joeybrand">
            {this.props.appName}
          </Link>
          
