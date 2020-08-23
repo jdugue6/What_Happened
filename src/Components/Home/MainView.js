@@ -1,5 +1,13 @@
 import JoeyDugue from '../Section/JoeyDugue';
 import React from 'react';
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
@@ -7,43 +15,30 @@ const mapStateToProps = state => ({
 });
 
 const MainView = props => {
+  let aboutMeActive="nav-link ";
+  let personalProjectActive="nav-link";
+  let classroomProjectActive="nav-link";
+  
   return (
     <div className="col-md-9">
       <div className="feed-toggle">
-        <ul className="nav nav-pills outline-active">
+      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+        <Tab eventKey="aboutme" title="About Me">
+      <JoeyDugue
+                articles={props.articles}/>
+        </Tab>
 
-
-        <li className="nav-item">
-          <a
-            href=""
-            className="nav-link active">
-            About Me
-          </a>
-        </li>
-      
-        <li className="nav-item">
-          <a
-            href=""
-            className="nav-link ">
-            Classroom Projects
-          </a>
-        </li>
+        <Tab eventKey="classroom" title="Classroom Project">
+    
+        </Tab>
+      <Tab eventKey="personal" title="Personal Project">
+      </Tab>
+      </Tabs>
        
-        <li className="nav-item">
-          <a
-            href=""
-            className="nav-link ">
-            Personal Projects
-          </a>
-        </li>
-      
-
-       </ul>
       </div>
 
-      <JoeyDugue
-        articles={props.articles} 
-      />
+      
+      
     </div>
   );
 };

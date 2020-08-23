@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './Header/Header';
+import Banner from './Home/Banner';
 import { connect } from 'react-redux';
 
 import './App.css'
@@ -15,6 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <Header appName={this.props.appName} />
+        <Banner appName={"Hello World!"} />
         {this.props.children}
       </div>
     );
