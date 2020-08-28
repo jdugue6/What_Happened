@@ -1,44 +1,37 @@
-import JoeyDugue from '../Section/JoeyDugue';
-import React from 'react';
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { connect } from 'react-redux';
+import JoeyDugue from "../Section/JoeyDugue";
+import ClassroomProject from "../Section/ClassroomProject";
+import PersonalProject from "../Section/PersonalProject";
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { connect } from "react-redux";
 
-const mapStateToProps = state => ({
-  articles: state.articles
+const mapStateToProps = (state) => ({
+  articles: state.articles,
 });
 
-const MainView = props => {
-  let aboutMeActive="nav-link ";
-  let personalProjectActive="nav-link";
-  let classroomProjectActive="nav-link";
-  
+const MainView = (props) => {
   return (
     <div className="col-md-9">
       <div className="feed-toggle">
-      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-        <Tab eventKey="aboutme" title="About Me">
-      <JoeyDugue
-                articles={props.articles}/>
-        </Tab>
+        <Tabs>
+          <TabList>
+            <Tab>About Me</Tab>
+            <Tab>Classroom Project</Tab>
+            <Tab>Personal Project</Tab>
+          </TabList>
 
-        <Tab eventKey="classroom" title="Classroom Project">
-    
-        </Tab>
-      <Tab eventKey="personal" title="Personal Project">
-      </Tab>
-      </Tabs>
-       
+          <TabPanel>
+            <JoeyDugue />
+          </TabPanel>
+          <TabPanel>
+            <ClassroomProject />
+          </TabPanel>
+          <TabPanel>
+            <PersonalProject />
+          </TabPanel>
+        </Tabs>
       </div>
-
-      
-      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
   
-const JoeyDugue = props =>{
+const ClassroomProject = props =>{
   
     return (
         <div>
@@ -12,4 +12,4 @@ const JoeyDugue = props =>{
 
 
 }
-export default JoeyDugue;
+export default ClassroomProject;
